@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834337001061",
+    "project_id": "flutterlearning-81b68",
+    "storage_bucket": "flutterlearning-81b68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834337001061:android:3f823dca8cce08c3cf808c",
+        "android_client_info": {
+          "package_name": "com.alexcollie.bustimetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834337001061-6sd60j5v46m1500ubs1toplc757qao78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYPwObeo_hrnaqr5lFIouDSNOk5wnBMAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834337001061-6sd60j5v46m1500ubs1toplc757qao78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
