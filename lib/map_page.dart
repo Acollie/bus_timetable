@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'timetable_page.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -11,6 +12,7 @@ class MapPage extends StatefulWidget {
   State<MapPage> createState() => _MapPageState();
 }
 
+
 class _MapPageState extends State<MapPage> {
   List<Marker> markers = [];
   void fetch_stop_info(){
@@ -19,13 +21,19 @@ class _MapPageState extends State<MapPage> {
 
         var item = jsonDecode(value.body);
         for (var bus_loc in item['stops']) {
-          markers.add(Marker(
+          markers.add(
+
+              Marker(
               width: 80,
               height: 80,
               point: LatLng(bus_loc['Latitude'], bus_loc['Longitude']),
-              builder: (ctx) => Icon(Icons.map,color: Colors.blue[900],
+
+              builder: (ctx) => IconButton(icon:Icon(Icons.map,color: Colors.red[900],), onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => TimetablePage(stop_id: 3987,)));
+              })
+
               )
-          ));
+            );
 
         }
         print('updating state');
@@ -57,9 +65,10 @@ class _MapPageState extends State<MapPage> {
               width: 80,
               height: 80,
               point: LatLng(bus_loc['lat'], bus_loc['lon']),
-              builder: (ctx) => Icon(Icons.directions_bus_sharp,color: Colors.red[900],
-              ),
-            ));
+              builder: (ctx) => Icon(Icons.directions_bus_sharp,color: Colors.red[900],)
+
+
+                ));
           }
 
         }

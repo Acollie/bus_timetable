@@ -35,7 +35,7 @@ class _MainpageState extends State<Mainpage> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     MapPage(),
-    TimetablePage(),
+    // TimetablePage(),
 
 
   ];
